@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOSRS - Diagnóstico de Doenças</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Slab&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>SOSRS</h1>
+        <p>Diagnóstico de doenças provenientes das enchentes no RS</p>
+    </header>
+    <main>
+        <form id="diagnostic-form">
+            <h2>Informe seus sintomas</h2>
+            <label for="symptoms">Sintomas:</label>
+            <textarea id="symptoms" name="symptoms" rows="5" placeholder="Descreva seus sintomas..."></textarea>
+            <button type="submit">Diagnosticar</button>
+        </form>
+        <button onclick="window.location.href='cam.html'">Abrir Câmera</button>
+        <div id="result"></div>
+    </main>
+    <footer>
+        <p>© 2024 SOSRS. Todos os direitos reservados.</p>
+    </footer>
+    <script src="./js/scripts.js"></script>
+    <!-- <script src="./js/teste.js"> </script> -->
+</body>
+
+</html>
