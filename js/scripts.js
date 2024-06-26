@@ -5,12 +5,10 @@ document.addEventListener('DOMContentLoaded', () => {
     form.addEventListener('submit', function(event) {
         event.preventDefault();
 
-        const symptoms = document.getElementById('symptoms').value.toLowerCase(); 
-
+        const symptoms = document.getElementById('symptoms').value.toLowerCase();
         let diagnosis = '';
 
         // Mapeamento de sintomas para doenças
-        
         const diseaseSymptoms = {
             'Leptospirose': ['febre alta', 'dor de cabeça', 'sangramentos', 'dor muscular', 'calafrios', 'olhos vermelhos', 'vômitos'],
             'Tétano': ['contrações musculares dolorosas', 'mandíbula', 'pescoço', 'dificuldade para respirar', 'febre', 'pressão alta', 'sudorese'],
@@ -19,8 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
             'Dengue': ['febre alta', 'dores musculares', 'erupções cutâneas', 'dores nas articulações', 'hemorragia intensa', 'dificuldade para respirar', 'edema', 'rubor', 'dor de cabeça'],
             'Animais peçonhentos': ['lugares úmidos', 'escuros', 'entulhos', 'destroços']
         };
-
-        
 
         // Função para verificar se todos os sintomas da doença estão presentes
         const hasAllSymptoms = (disease, symptomsList) => {

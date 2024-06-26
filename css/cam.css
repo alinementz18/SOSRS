@@ -1,53 +1,75 @@
-body, html {
+/* cam.css */
+
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
-    height: 100%;
-    font-family: Arial, sans-serif;
-}
-
-.hidden {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f1f1f1;
+  }
+  
+  #dialog-camera {
     display: none;
-}
-
-#dialog-camera {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    display: flex;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
     justify-content: center;
     align-items: center;
-    z-index: 10;
-}
-
-#video-preview-container, #photo-preview-container {
-    display: flex;
     flex-direction: column;
-    align-items: center;
-}
-
-#video-preview {
-    max-width: 100%;
-    max-height: 80vh;
-}
-
-#photo-preview {
-    max-width: 100%;
-    max-height: 80vh;
-}
-
-#btn-camera, #btn-toggle-camera, #btn-close-dialog, #btn-repeat, #btn-ok {
-    margin-top: 10px;
-    padding: 10px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
+  }
+  
+  #video-preview-container, #photo-preview-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  video, img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .flex {
+    display: flex;
+  }
+  
+  button {
     cursor: pointer;
-}
-
-#btn-camera:hover, #btn-toggle-camera:hover, #btn-close-dialog:hover, #btn-repeat:hover, #btn-ok:hover {
-    background-color: #45a049;
-}
+    font-size: 16px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  i {
+    cursor: pointer;
+  }
+  
+  .landscape i, .landscape button {
+    margin-bottom: 10px;
+  }
+  
